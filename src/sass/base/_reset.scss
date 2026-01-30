@@ -1,0 +1,25 @@
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+}
+
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
