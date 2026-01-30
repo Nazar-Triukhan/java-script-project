@@ -1,0 +1,90 @@
+.team{
+position: relative;
+font-family: "Montserrat Alternates";
+    &__box{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__slider{
+        width: 300px;
+        border: 1px solid red;
+        overflow-x: hidden;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: center;
+        
+        gap: 100px;
+        transition: transform 0.5s;
+        // transform: translate(500px,0px);
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        margin: 0 auto;
+        gap: 10px;
+    }
+&__img{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(111, 111, 111);
+    border-radius: 20px;
+}
+
+&__subtitle{
+    display: flex;
+    justify-content: center;
+        text-align: center;
+}
+
+&__text{
+    display: flex;
+    text-align: center;
+    height: 55px;
+    width: 150px;
+}
+
+&__ri{
+    width: 20px;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    transform: translate(200px,100px);
+}
+
+&__le{
+        width: 20px;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    transform: translate(-200px,100px);
+}
+
+&__items{
+display: flex;
+gap: 5px;
+margin-top: 20px;
+justify-content: center;
+}
+
+&__line{
+    width: 18px;
+    height: 3px;
+    background-color: rgba(217, 217, 217, 1);
+    display: block;
+    border-radius: 3px;
+        transition:  background-color 0.5s,width 0.5s;
+}
+
+&__active{
+    width: 30px;
+    background-color: rgba(121, 121, 121, 1);
+}
+
+}
