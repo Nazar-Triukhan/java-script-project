@@ -9,7 +9,7 @@ font-family: "Montserrat Alternates";
 
     &__slider{
         width: 300px;
-        border: 1px solid red;
+        // border: 1px solid red;
         overflow-x: hidden;
     }
 
@@ -50,22 +50,23 @@ font-family: "Montserrat Alternates";
     width: 150px;
 }
 
-&__ri{
-    width: 20px;
-    background-color: aqua;
+&__arrow{
+        width: 50px;
+        height: 100px;
     position: absolute;
     top: 0;
-    transform: translate(200px,100px);
+    @media screen and (max-width:400px) {
+        display: none;
+    }
+}
+
+&__ri{
+    transform: translate(clamp(9.375rem, 3.94rem + 21.74vw, 18.75rem),90px);
 }
 
 &__le{
-        width: 20px;
-    background-color: aqua;
-    position: absolute;
-    top: 0;
-    transform: translate(-200px,100px);
+      transform: translate(clamp(-300px, -63.044px + -21.739vw, -150px), 90px) rotate(180deg);
 }
-
 &__items{
 display: flex;
 gap: 5px;
