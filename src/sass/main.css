@@ -84,7 +84,6 @@ img {
 }
 .team__slider {
   width: 300px;
-  border: 1px solid red;
   overflow-x: hidden;
 }
 .team__list {
@@ -116,19 +115,22 @@ img {
   height: 55px;
   width: 150px;
 }
-.team__ri {
-  width: 20px;
-  background-color: aqua;
+.team__arrow {
+  width: 50px;
+  height: 100px;
   position: absolute;
   top: 0;
-  transform: translate(200px, 100px);
+}
+@media screen and (max-width: 400px) {
+  .team__arrow {
+    display: none;
+  }
+}
+.team__ri {
+  transform: translate(clamp(9.375rem, 3.94rem + 21.74vw, 18.75rem), 90px);
 }
 .team__le {
-  width: 20px;
-  background-color: aqua;
-  position: absolute;
-  top: 0;
-  transform: translate(-200px, 100px);
+  transform: translate(clamp(-300px, -63.044px - 21.739vw, -150px), 90px) rotate(180deg);
 }
 .team__items {
   display: flex;
@@ -152,17 +154,21 @@ img {
 .footer {
   font-family: "Montserrat Alternates";
   padding: 60px 0;
+}
+.footer__box {
   display: flex;
-  -moz-column-gap: 156px;
-       column-gap: 156px;
-  max-width: 1090px;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto;
+}
+@media (max-width: 797px) {
+  .footer__box {
+    justify-content: center;
+    gap: clamp(1.25rem, -3.372rem + 16.81vw, 5rem);
+  }
 }
 .footer__logo {
-  max-width: 165px;
+  width: 124px;
+  height: 50px;
 }
 .footer__link {
   color: #000;
@@ -183,9 +189,10 @@ img {
 .footer__input::placeholder {
   color: rgb(126, 126, 126);
 }
-@media (max-width: 367px) {
+@media (max-width: 397px) {
   .footer__input {
-    width: 265px;
+    display: block;
+    width: 290px;
   }
 }
 .footer__btn {
@@ -196,46 +203,31 @@ img {
   color: white;
   border: none;
 }
-@media (max-width: 367px) {
+@media (max-width: 397px) {
   .footer__btn {
     width: 100%;
+  }
+}
+@media (max-width: 797px) {
+  .footer__wrap {
+    margin: 0 auto;
   }
 }
 .footer__form {
   display: flex;
   gap: 36px;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
-@media (max-width: 367px) {
+@media (max-width: 397px) {
   .footer__form {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 }
-@media (max-width: 564px) {
-  .footer__form {
-    margin-top: 30px;
-  }
-}
-@media (max-width: 1065px) {
-  .footer__form {
-    margin-top: 50px;
-  }
-}
 .footer__text {
   font-size: 8px;
   margin-top: 18px;
-}
-@media (max-width: 367px) {
-  .footer__text {
-    margin-top: 5px;
-  }
-}
-@media (max-width: 564px) {
-  .footer__list {
-    margin-top: 30px;
-  }
 }
 .footer__backdrop {
   position: fixed;

@@ -1,17 +1,24 @@
 .footer {
   font-family: "Montserrat Alternates";
   padding: 60px 0;
-      display: flex;
-    // justify-content: space-between;
-    column-gap: 156px;
-    max-width: 1090px;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    margin: 0 auto;
-
+    //   display: flex;
+    // column-gap: 156px;
+    // flex-wrap: wrap;
+    // width: 100%;
+    // justify-content: center;
+    // margin: 0 auto;
+&__box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+      @media (max-width: 797px) {
+      justify-content: center;
+      gap: clamp(1.25rem, -3.372rem + 16.81vw, 5rem);
+    }
+}
   &__logo {
-    max-width: 165px;
+    width: 124px;
+    height: 50px;
   }
 
   &__link {
@@ -30,8 +37,9 @@
     &::placeholder {
       color: rgba(126, 126, 126, 1);
     }
-    @media (max-width: 367px) {
-      width: 265px;
+    @media (max-width: 397px) {
+      display: block;
+      width: 290px;
     }
   }
 
@@ -42,41 +50,47 @@
     font-weight: 100;
     color: white;
     border: none;
-    @media (max-width: 367px) {
+    @media (max-width: 397px) {
       width: 100%;
     }
   }
 
+
+  &__wrap{
+        @media (max-width: 797px) {
+          margin: 0 auto;
+    }
+
+  }
   &__form {
     display: flex;
     gap: 36px;
-    margin: 0 auto;
-    @media (max-width: 367px) {
+    flex-wrap: wrap;
+    // margin: 0 auto;
+    @media (max-width: 397px) {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-    @media (max-width: 564px) {
-      margin-top: 30px;
-    }
+    // @media (max-width: 797px) {
+    //   margin-top: 30px;
+    // }
 
-    @media (max-width: 1065px) {
-      margin-top: 50px;
-    }
+
   }
 
   &__text {
     font-size: 8px;
     margin-top: 18px;
-    @media (max-width: 367px) {
-      margin-top: 5px;
-    }
+    // @media (max-width: 367px) {
+    //   margin-top: 5px;
+    // }
   }
 
   &__list {
-    @media (max-width: 564px) {
-      margin-top: 30px;
-    }
+    // @media (max-width: 797px) {
+    //   margin-right: auto;
+    // }
   }
 
   &__backdrop {
