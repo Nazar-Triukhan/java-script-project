@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <script type="module" crossorigin src="/java-script-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/java-script-project/assets/index-08694f9d.css">
+    <link rel="stylesheet" href="/java-script-project/assets/index-8e6ec2e9.css">
   </head>
   <body>
     <!-- <section> -->
@@ -85,15 +85,16 @@
             <li class="team elem"><span class="team__line"></span></li>
         </ul>
       </div>
-      <div class="team__ri">></div>
-      <div class="team__le">></div>
+<img class="team__ri team__arrow" src="/java-script-project/assets/arrow-359cacc1.svg" alt="">
+<img class="team__le team__arrow" src="/java-script-project/assets/arrow-359cacc1.svg" alt="">
+
       </div>
     </section>
     
       <footer class="footer">
-      <!-- <div class="container footer__box"> -->
-        <a class="footer__logo" href="#">
-          <img src="./image/Group 128 1.svg" alt="logo" />
+      <div class="container footer__box">
+        <a class="footer__link-logo" href="#">
+          <img class="footer__logo" src="/java-script-project/assets/logo-a9fdb88d.svg" alt="logo" />
         </a>
 
         <ul class="footer__list">
@@ -106,13 +107,16 @@
           <li><a class="footer__link" href="#">Instagram: CodingMagic</a></li>
         </ul>
 
-        <div>
+        <div class="footer__wrap">
           <form class="footer__form">
-            <input
-              class="footer__input"
-              type="text"
-              placeholder="Ваша ел. адреса..."
-            />
+<input
+  class="footer__input"
+  type="email"
+  required
+  placeholder="Ваша ел. адреса..."
+  title="Введіть коректну email адресу"
+/>
+
             <button class="footer__btn" type="button">Підписатись</button>
           </form>
           <p class="footer__text">
