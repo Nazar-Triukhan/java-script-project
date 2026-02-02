@@ -31,6 +31,28 @@ img {
   box-sizing: border-box;
 }
 
+.year {
+  padding: 36px 0;
+}
+.year__title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.year__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 149px;
+  margin-top: 36px;
+}
+
 .football {
   font-family: "Montserrat Alternates";
   padding: 20px 0;
