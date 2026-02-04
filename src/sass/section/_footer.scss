@@ -28,12 +28,19 @@
   &__input {
     background-color: rgba(215, 215, 215, 1);
     outline: none;
-    border: none;
+border: transparent;
     width: 196px;
     height: 35px;
     border-radius: 20px;
     padding-left: 10px;
     color: rgba(126, 126, 126, 1);
+    transition: outline 200ms ease;
+    &:hover{
+      outline: 3px solid rgb(118, 118, 118);
+    }
+    &:focus{
+      outline: 1px solid rgb(118, 118, 118);
+    }
     &::placeholder {
       color: rgba(126, 126, 126, 1);
     }
@@ -50,6 +57,13 @@
     font-weight: 100;
     color: white;
     border: none;
+    transition: background-color 200ms,transform 200ms;
+    &:hover{
+      background-color: #000000c1;
+    }
+    &:active{
+      transform: scale(1.2);
+    }
     @media (max-width: 397px) {
       width: 100%;
     }
@@ -86,28 +100,19 @@
     //   margin-top: 5px;
     // }
   }
-
-  &__list {
-    // @media (max-width: 797px) {
-    //   margin-right: auto;
-    // }
-  }
+// &__list {
+  //   // @media (max-width: 797px) {
+  //   //   margin-right: auto;
+  //   // }
+  // }
 
   &__backdrop {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.516);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__modal {
-    height: 400px;
-    width: 400px;
+ height: 245px;
+    width: clamp(19.375rem, 0.25rem + 95.63vw, 28.938rem);
     border-radius: 20px;
     background-color: #fff;
     justify-content: center;
@@ -116,12 +121,16 @@
   }
 
   &__modal-close {
-    width: 20px;
-    height: 20px;
+ width: 15px;
+    height: 15px;
     position: absolute;
-    background-color: red;
-    top: 5px;
-    right: 10px;
+ top: 30px;
+    right: 30px;
+  }
+
+  &__modal__text{
+    margin-top: 83px;
+    text-align: center;
   }
 }
 
