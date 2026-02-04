@@ -31,6 +31,76 @@ img {
   box-sizing: border-box;
 }
 
+.year {
+  width: 100%;
+}
+.year-title {
+  font-size: 24px;
+  margin: 36px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.year-subtitle {
+  font-size: 16px;
+  margin: 36px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.year-leap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 149px;
+}
+.year-text {
+  height: 35px;
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 12px;
+  padding-left: 20px;
+}
+.year-btn {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  right: 0;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.year-span {
+  font-size: 12px;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #039900;
+}
+.year-search {
+  width: 215px;
+  /* padding: 4px; */
+  border-radius: 999px;
+  background-color: #D7D7D7;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 536px;
+  border: 1px solid #000000;
+}
+
 .football {
   font-family: "Montserrat Alternates";
   padding: 20px 0;
