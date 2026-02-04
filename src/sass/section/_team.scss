@@ -1,6 +1,11 @@
 .team{
 position: relative;
 font-family: "Montserrat Alternates";
+
+&__title{
+    text-align: center;
+    margin-bottom: 20px;
+}
     &__box{
         display: flex;
         justify-content: center;
@@ -44,7 +49,7 @@ font-family: "Montserrat Alternates";
 }
 
 &__text{
-    display: flex;
+    display: block;
     text-align: center;
     height: 55px;
     width: 150px;
@@ -61,11 +66,24 @@ font-family: "Montserrat Alternates";
 }
 
 &__ri{
-    transform: translate(clamp(9.375rem, 3.94rem + 21.74vw, 18.75rem),90px);
+    // transform: translate(clamp(9.375rem, 3.94rem + 21.74vw, 18.75rem),90px);
+    right: clamp(1.875rem, -7.908rem + 39.13vw, 18.75rem);
+    top: 60px;
+        transform: transform .1s;
+    &:active{
+        transform: scale(1.3);
+    }
 }
 
 &__le{
-      transform: translate(clamp(-300px, -63.044px + -21.739vw, -150px), 90px) rotate(180deg);
+    //   transform: translate(clamp(-300px, -63.044px + -21.739vw, -150px), 90px) rotate(180deg);
+    top: 60px;
+    left: clamp(1.875rem, -7.908rem + 39.13vw, 18.75rem);
+    transition: transform .1s;
+    transform: rotate(180deg);
+    &:active{
+        transform: scale(1.3) rotate(180deg);
+    }
 }
 &__items{
 display: flex;
@@ -88,4 +106,8 @@ justify-content: center;
     background-color: rgba(121, 121, 121, 1);
 }
 
+
+// &__scale{
+//     transform: scale(2);
+// }
 }

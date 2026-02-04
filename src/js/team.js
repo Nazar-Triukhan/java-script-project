@@ -20,6 +20,7 @@ function updateLine() {
 
 // кнопка вправо
 controlRiRef.addEventListener('click', () => {
+  controlRiRef.classList.add('team__scale')
   index++
   offset -= step
 
