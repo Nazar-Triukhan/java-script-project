@@ -368,12 +368,19 @@ hr {
 }
 .footer__backdrop {
   position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 .footer__modal {
   height: 245px;
   width: clamp(19.375rem, 0.25rem + 95.63vw, 28.938rem);
   border-radius: 20px;
   background-color: #fff;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -386,8 +393,27 @@ hr {
   right: 30px;
 }
 .footer__modal__text {
-  margin-top: 83px;
   text-align: center;
+}
+.footer__modal-item:nth-child(1) .footer__modal-img {
+  position: absolute;
+  top: 145px;
+  right: 86px;
+}
+.footer__modal-item:nth-child(2) .footer__modal-img {
+  position: absolute;
+  top: 145px;
+  left: 86px;
+}
+.footer__modal-item:nth-child(3) .footer__modal-img {
+  position: absolute;
+  top: 69px;
+  right: 43px;
+}
+.footer__modal-item:nth-child(4) .footer__modal-img {
+  position: absolute;
+  top: 69px;
+  left: 43px;
 }
 
 .is__close {
