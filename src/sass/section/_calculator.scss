@@ -1,0 +1,77 @@
+.calculator{
+    font-family: "Montserrat Alternates";
+    &::before{
+        content: '';
+        display: block;
+        width: clamp(100px, 96%, 565px);
+        height: 2px;
+        background: black;
+        margin: 0 auto 12px;
+    }
+
+    &__title {
+        margin: 36px 0px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 38px;
+        margin-bottom: 36px;
+        
+     }
+
+    &__box {
+        width: 85px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__input {
+        width: 135px;
+        height: 10px;
+        padding: 10px 20px 20px 10px;
+        border-radius: 20px;
+        background-color: #D7D7D7;
+        box-shadow: 3px 3px 0px 0px #00000040;
+        border: none;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    &__result {
+        width: 118px;
+        height: 10px;
+        padding: 10px 20px 20px 10px;
+        border-radius: 20px;
+        background-color: #D7D7D7; 
+        text-align: center;
+        border: none;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__button {
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        background-color: #000;
+        color: #FFF;
+        border-radius: 20px;
+        box-shadow: 3px 3px 0px 0px #00000040;
+        font-size: 12px;
+    }
+}
