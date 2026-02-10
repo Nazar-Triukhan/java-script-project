@@ -10,6 +10,7 @@ inputBigestEl.forEach((input) => {
 
                     console.log(numbers);
                     
+                    
 
             if (numbers[0] !== "" && numbers[1] !== "" && numbers[2] !== "") {
             numbers.sort((a, b) => b-a)
