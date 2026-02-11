@@ -353,6 +353,7 @@ hr {
   opacity: 0.6;
 }
 .paper__item-btn-active {
+  background-color: greenyellow;
   transform: translate(0.5px, 1px);
   box-shadow: inset 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
