@@ -41,7 +41,7 @@ body {
 }
 
 body.dark {
-  background-color: #1e1e1e;
+  background-color: #565656;
   color: #ededed;
 }
 
@@ -51,6 +51,13 @@ body.dark {
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+.header-container {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.146);
+  display: flex;
+  margin-bottom: 36px;
 }
 .header-nav {
   width: 100%;
@@ -249,6 +256,144 @@ body.dark {
 hr {
   width: 536px;
   border: 1px solid #000000;
+}
+
+.calculator {
+  font-family: "Montserrat Alternates";
+}
+.calculator::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 565px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
+}
+.calculator__title {
+  margin: 36px 0px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.calculator__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  margin-bottom: 36px;
+}
+.calculator__box {
+  width: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.calculator__input {
+  width: 135px;
+  height: 10px;
+  padding: 10px 20px 20px 10px;
+  border-radius: 20px;
+  background-color: #D7D7D7;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.calculator__result {
+  width: 118px;
+  height: 10px;
+  padding: 10px 20px 20px 10px;
+  border-radius: 20px;
+  background-color: #D7D7D7;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.calculator__button {
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  font-size: 12px;
+}
+
+.time {
+  font-family: "Montserrat Alternates";
+}
+.time::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 565px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
+}
+.time__title {
+  margin: 36px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.time__relative {
+  position: relative;
+}
+.time__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+  margin-bottom: 36px;
+}
+.time__input {
+  width: 135px;
+  height: 10px;
+  padding: 10px 20px 20px 10px;
+  border-radius: 20px;
+  background-color: #D7D7D7;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  border: none;
+}
+.time__input::-moz-placeholder {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+}
+.time__input::placeholder {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+}
+.time__button {
+  display: inline-flex;
+  padding: 10px;
+  align-items: flex-start;
+  border-radius: 0 20px 20px 0;
+  background: #000;
+  position: absolute;
+  top: 1px;
+  right: 0px;
+}
+.time__svg {
+  width: 15px;
+  height: 15px;
+}
+.time__line {
+  border-top: 1px dashed #000;
+  width: 100px;
 }
 
 .football {
