@@ -38,10 +38,11 @@ body {
   background-color: #ffffff;
   color: #111111;
   overflow: hidden;
+  padding-top: 36px;
 }
 
 body.dark {
-  background-color: #565656;
+  background-color: #494949;
   color: #ededed;
 }
 
@@ -56,8 +57,9 @@ body.dark {
   width: 100%;
   height: 80px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.146);
+  background-color: #ffffff;
   display: flex;
-  margin-bottom: 36px;
+  align-items: center;
 }
 .header-nav {
   width: 100%;
@@ -320,6 +322,74 @@ hr {
   height: 15px;
 }
 
+.paper {
+  padding: 36px 0px;
+}
+.paper .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+}
+.paper__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.paper__items {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+.paper__item-btn {
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+  background: #000;
+  transition: background-color 100ms ease, transform 100ms ease, opacity 250ms ease;
+}
+.paper__item-btn:hover {
+  opacity: 0.6;
+}
+.paper__item-btn-active {
+  transform: translate(0.5px, 1px);
+  box-shadow: inset 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.paper__win-lost {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.paper__btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.paper__btn {
+  color: #fff;
+  background: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0px auto;
+  border: none;
+  transition: 250ms;
+}
+.paper__btn:hover {
+  background: #292929;
+}
+.paper__score {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
 .calculator {
   font-family: "Montserrat Alternates";
 }
@@ -465,7 +535,7 @@ hr {
 .football::before {
   content: "";
   display: block;
-  width: clamp(100px, 96%, 565px);
+  width: clamp(100px, 96%, 536px);
   height: 2px;
   background: black;
   margin: 0 auto 12px;
@@ -548,12 +618,15 @@ hr {
   margin-bottom: 20px;
 }
 .team__box {
-  display: flex;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team__slider {
   width: 300px;
   overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team__list {
   display: flex;
@@ -633,6 +706,14 @@ hr {
 
 .scientists {
   padding: 20px 0;
+}
+.scientists::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
 }
 .scientists__title {
   color: #000;
