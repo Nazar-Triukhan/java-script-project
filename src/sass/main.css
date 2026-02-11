@@ -258,6 +258,75 @@ hr {
   border: 1px solid #000000;
 }
 
+.paper {
+  padding: 36px 0px;
+}
+.paper .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+}
+.paper__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.paper__items {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+.paper__item-btn {
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+  background: #000;
+  transition: background-color 100ms ease, transform 100ms ease, opacity 250ms ease;
+}
+.paper__item-btn:hover {
+  opacity: 0.6;
+}
+.paper__item-btn-active {
+  background-color: greenyellow;
+  transform: translate(0.5px, 1px);
+  box-shadow: inset 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.paper__win-lost {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.paper__btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.paper__btn {
+  color: #fff;
+  background: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0px auto;
+  border: none;
+  transition: 250ms;
+}
+.paper__btn:hover {
+  background: #292929;
+}
+.paper__score {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
 .calculator {
   font-family: "Montserrat Alternates";
 }
