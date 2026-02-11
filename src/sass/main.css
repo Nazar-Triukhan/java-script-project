@@ -536,7 +536,7 @@ hr {
 .football::before {
   content: "";
   display: block;
-  width: clamp(100px, 96%, 565px);
+  width: clamp(100px, 96%, 536px);
   height: 2px;
   background: black;
   margin: 0 auto 12px;
@@ -619,12 +619,15 @@ hr {
   margin-bottom: 20px;
 }
 .team__box {
-  display: flex;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team__slider {
   width: 300px;
   overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team__list {
   display: flex;
@@ -704,6 +707,14 @@ hr {
 
 .scientists {
   padding: 20px 0;
+}
+.scientists::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
 }
 .scientists__title {
   color: #000;

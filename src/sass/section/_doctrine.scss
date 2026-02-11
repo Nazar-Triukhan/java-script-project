@@ -1,5 +1,15 @@
 .scientists{
     padding: 20px 0;
+        &::before {
+  content: '';
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
+}
+
+
 
     &__title{
         color: #000;
