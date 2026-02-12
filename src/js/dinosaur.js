@@ -52,13 +52,12 @@ window.onload = function () {
 
     // картинки (відносні шляхи для GitHub Pages)
 const imagesToLoad = [
-    {img: dinoImg, src: "src/img/dino.png"},
-    {img: dinoDeadImg, src: "src/img/dino-dead.png"},
-    {img: cactus1Img, src: "src/img/cactus1.png"},
-    {img: cactus2Img, src: "src/img/cactus2.png"},
-    {img: cactus3Img, src: "src/img/cactus3.png"}
+    {img: dinoImg, src: "java-script-project/img/dino.png"},
+    {img: dinoDeadImg, src: "java-script-project/img/dino-dead.png"},
+    {img: cactus1Img, src: "java-script-project/img/cactus1.png"},
+    {img: cactus2Img, src: "java-script-project/img/cactus2.png"},
+    {img: cactus3Img, src: "java-script-project/img/cactus3.png"}
 ];
-
     let loadedImages = 0;
     imagesToLoad.forEach(item => {
         item.img.src = item.src;
