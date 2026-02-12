@@ -38,7 +38,7 @@ body {
   background-color: #ffffff;
   color: #111111;
   overflow: hidden;
-  padding-top: 36px;
+  padding-top: 72px;
 }
 
 body.dark {
@@ -527,6 +527,24 @@ hr {
 .time__line {
   border-top: 1px dashed #000;
   width: 100px;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+#board {
+  background-color: lightgray;
+  border-bottom: 1px solid black;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.dino__box {
+  display: flex;
+  margin-left: 400px;
+  gap: 10px;
 }
 
 .football {
