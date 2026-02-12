@@ -51,18 +51,35 @@ window.onload = function () {
     liRef.forEach((li,i) => li.innerText = `${i+1}: ${records[i]}`);
 
     // картинки (відносні шляхи для GitHub Pages)
-    dinoImg.src = "./img/dino.png";
-    dinoDeadImg.src = "./img/dino-dead.png";
-    cactus1Img.src = "./img/cactus1.png";
-    cactus2Img.src = "./img/cactus2.png";
-    cactus3Img.src = "./img/cactus3.png";
+    const imagesToLoad = [
+        {img: dinoImg, src: "./img/dino.png"},
+        {img: dinoDeadImg, src: "./img/dino-dead.png"},
+        {img: cactus1Img, src: "./img/cactus1.png"},
+        {img: cactus2Img, src: "./img/cactus2.png"},
+        {img: cactus3Img, src: "./img/cactus3.png"}
+    ];
 
-    requestAnimationFrame(update);
-    setInterval(placeCactus, 1000);
+    let loadedImages = 0;
+    imagesToLoad.forEach(item => {
+        item.img.src = item.src;
+        item.img.onload = () => {
+            loadedImages++;
+            if (loadedImages === imagesToLoad.length) {
+                // старт гри після завантаження всіх картинок
+                requestAnimationFrame(update);
+                setInterval(placeCactus, 1000);
+            }
+        };
+        item.img.onerror = () => console.error("Не вдалося завантажити картинку:", item.src);
+    });
 
     document.addEventListener("keydown", e => {
         if (["Space","ArrowUp"].includes(e.code)) e.preventDefault();
-        if (!gameStarted && (e.code==="Space" || e.code==="ArrowUp")) { gameStarted=true; velocityY=-10; return; }
+        if (!gameStarted && (e.code==="Space" || e.code==="ArrowUp")) { 
+            gameStarted=true; 
+            velocityY=-10; 
+            return; 
+        }
         if (gameOver && e.code==="Space") location.reload();
         moveDino(e);
     });
