@@ -44,23 +44,21 @@ let score = 0;
 let liRef; // рекорди
 
 window.onload = function () {
-    // canvas
     board = document.getElementById("board");
     board.width = boardWidth;
     board.height = boardHeight;
     context = board.getContext("2d");
 
-    // рекорди
     liRef = document.querySelectorAll(".record");
     const records = JSON.parse(localStorage.getItem("dinoRecords")) || [0, 0, 0];
     liRef.forEach((li, i) => li.innerText = `${i+1}: ${records[i]}`);
 
-    // картинки
-    dinoImg.src = "/img/dino.png";
-    dinoDeadImg.src = "/img/dino-dead.png";
-    cactus1Img.src = "/img/cactus1.png";
-    cactus2Img.src = "/img/cactus2.png";
-    cactus3Img.src = "/img/cactus3.png";
+    // Відносні шляхи для GitHub Pages
+    dinoImg.src = "./img/dino.png";
+    dinoDeadImg.src = "./img/dino-dead.png";
+    cactus1Img.src = "./img/cactus1.png";
+    cactus2Img.src = "./img/cactus2.png";
+    cactus3Img.src = "./img/cactus3.png";
 
     requestAnimationFrame(update);
     setInterval(placeCactus, 1000);
@@ -84,7 +82,6 @@ function update() {
     requestAnimationFrame(update);
     context.clearRect(0, 0, board.width, board.height);
 
-    // старт гри
     if (!gameStarted) {
         if (dinoImg.complete) context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
         context.fillStyle = "black";
@@ -95,20 +92,16 @@ function update() {
 
     if (gameOver) return;
 
-    // physics динозавра
     velocityY += gravity;
     dino.y = Math.min(dino.y + velocityY, dinoY);
     if (dinoImg.complete) context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
 
-    // кактуси
     cactusArray.forEach(cactus => {
         cactus.x += velocityX;
         if (cactus.img && cactus.img.complete) context.drawImage(cactus.img, cactus.x, cactus.y, cactus.width, cactus.height);
-
         if (!gameOver && detectCollision(dino, cactus)) endGame();
     });
 
-    // рахунок
     context.fillStyle = "black";
     context.font = "20px courier";
     context.fillText(score, 5, 20);
@@ -128,7 +121,7 @@ function placeCactus() {
     if (chance > 0.9) { cactus.img = cactus3Img; cactus.width = cactus3Width; }
     else if (chance > 0.7) { cactus.img = cactus2Img; cactus.width = cactus2Width; }
     else if (chance > 0.5) { cactus.img = cactus1Img; cactus.width = cactus1Width; }
-    else return; // якщо шанс менше 0.5 – не створюємо кактус
+    else return;
 
     cactusArray.push(cactus);
     if (cactusArray.length > 5) cactusArray.shift();
@@ -144,7 +137,6 @@ function detectCollision(a, b) {
 function endGame() {
     gameOver = true;
 
-    // фінальна відрисовка
     context.clearRect(0, 0, board.width, board.height);
     if (dinoDeadImg.complete) context.drawImage(dinoDeadImg, dino.x, dino.y, dino.width, dino.height);
     cactusArray.forEach(cactus => {
