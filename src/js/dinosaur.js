@@ -50,14 +50,20 @@ window.onload = function () {
     const records = JSON.parse(localStorage.getItem("dinoRecords")) || [0,0,0];
     liRef.forEach((li,i) => li.innerText = `${i+1}: ${records[i]}`);
 
-    // картинки (відносні шляхи для GitHub Pages)
 const imagesToLoad = [
-    {img: dinoImg, src: "java-script-project/img/dino.png"},
-    {img: dinoDeadImg, src: "java-script-project/img/dino-dead.png"},
-    {img: cactus1Img, src: "java-script-project/img/cactus1.png"},
-    {img: cactus2Img, src: "java-script-project/img/cactus2.png"},
-    {img: cactus3Img, src: "java-script-project/img/cactus3.png"}
+    {img: dinoImg, src: "img/dino.png"},
+    {img: dinoDeadImg, src: "img/dino-dead.png"},
+    {img: cactus1Img, src: "img/cactus1.png"},
+    {img: cactus2Img, src: "img/cactus2.png"},
+    {img: cactus3Img, src: "img/cactus3.png"}
 ];
+
+// Завантаження всіх картинок
+imagesToLoad.forEach(o => {
+    o.img.src = o.src;
+    o.img.onerror = () => console.log("Не вдалося завантажити картинку: " + o.src);
+});
+
     let loadedImages = 0;
     imagesToLoad.forEach(item => {
         item.img.src = item.src;
