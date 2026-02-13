@@ -516,16 +516,10 @@ hr {
   background-color: #D7D7D7;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2509803922);
   border: none;
-}
-.time__input::-moz-placeholder {
-  text-align: center;
-  font-weight: 400;
   font-size: 12px;
-}
-.time__input::placeholder {
-  text-align: center;
   font-weight: 400;
-  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
 }
 .time__button {
   display: inline-flex;
@@ -566,7 +560,6 @@ body {
 
 .football {
   font-family: "Montserrat Alternates";
-  padding: 20px 0;
 }
 .football::before {
   content: "";
@@ -575,6 +568,9 @@ body {
   height: 2px;
   background: black;
   margin: 0 auto 12px;
+}
+.football {
+  padding: 20px 0;
 }
 .football__box {
   width: 100%;
