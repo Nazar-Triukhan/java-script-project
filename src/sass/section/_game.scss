@@ -1,6 +1,15 @@
 .paper {
   padding: 36px 0px;
 
+  &::before {
+  content: '';
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
+}
+
   .container {
     position: relative;
     display: flex;
