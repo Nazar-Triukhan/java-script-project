@@ -38,12 +38,10 @@
         background-color: #D7D7D7;
         box-shadow: 3px 3px 0px 0px #00000040;
         border: none;
-    }
-
-    &__input::placeholder{
-        text-align: center;
-        font-weight: 400;
         font-size: 12px;
+        font-weight: 400;
+        line-height: 1.25;
+        text-align: center;
     }
 
     &__button{
