@@ -266,6 +266,15 @@ hr {
   text-align: center;
   flex-direction: column;
   gap: 36px;
+  padding-top: 20px;
+}
+.random::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
 }
 .random__title {
   color: #000;
@@ -324,6 +333,14 @@ hr {
 
 .paper {
   padding: 36px 0px;
+}
+.paper::before {
+  content: "";
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
 }
 .paper .container {
   position: relative;
@@ -954,6 +971,83 @@ body {
 }
 
 .is__close {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 576px;
+  height: 316px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.modal-btn-close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: transparent;
+}
+.modal-content {
+  width: 450px;
+  height: 214px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-title {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+.modal-text {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+}
+.modal-input {
+  width: 169px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #D7D7D7;
+  color: #7A7A7A;
+  margin-bottom: 17px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.modal-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  background-color: black;
+  color: #FFFFFF;
+  font-family: "Montserrat Alternates", sans-serif;
+  cursor: pointer;
+}
+
+.is-active {
   opacity: 0;
   pointer-events: none;
 }/*# sourceMappingURL=main.css.map */

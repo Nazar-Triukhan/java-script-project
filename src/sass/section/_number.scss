@@ -4,7 +4,17 @@
   text-align: center;
   flex-direction: column;
   gap: 36px;
+  padding-top: 20px;
   
+
+  &::before {
+  content: '';
+  display: block;
+  width: clamp(100px, 96%, 536px);
+  height: 2px;
+  background: black;
+  margin: 0 auto 12px;
+}
   &__title {
     color: #000;
     font-family: 'Montserrat Alternates';
