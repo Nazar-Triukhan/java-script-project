@@ -3,7 +3,7 @@ const backdropEl = document.querySelector('.backdrop');
 const btnCloseEl = document.querySelector('.modal-btn-close');
 const modalInputEl = document.querySelector(".modal-input")
 const modalBtnEl = document.querySelector(".modal-btn")
-const userGreetingEl = document.querySelector(".user-greeting")
+const userGreetingEl = document.querySelector(".header-user-greeting")
 
 document.addEventListener("DOMContentLoaded", () => {
     openModal()
