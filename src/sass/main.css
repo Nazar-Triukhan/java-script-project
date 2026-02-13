@@ -560,6 +560,7 @@ body {
 
 .football {
   font-family: "Montserrat Alternates";
+  padding: 20px 0;
 }
 .football::before {
   content: "";
@@ -568,9 +569,6 @@ body {
   height: 2px;
   background: black;
   margin: 0 auto 12px;
-}
-.football {
-  padding: 20px 0;
 }
 .football__box {
   width: 100%;
